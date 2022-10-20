@@ -1,7 +1,6 @@
 function isItATriangle(event) {
   event.preventDefault();
 
-
   let equal = document.querySelector("div#equal");
   let isos = document.querySelector("div#iso");
   let scal = document.querySelector("div#sca");
@@ -28,4 +27,15 @@ function isItATriangle(event) {
 window.addEventListener("load", function () {
   const form = document.getElementById("triangle");
   form.addEventListener("submit", isItATriangle);
+
+  let body = document.body;
+  body.onkeydown = function() {
+  body.style.backgroundColor = "black";
+  body.style.color = "white";
+};
+
+  body.onkeyup = function() {
+  body.style.backgroundColor = "darkgoldenrod";
+  body.style.color = "black";
+};
 });
