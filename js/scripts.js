@@ -10,14 +10,18 @@ function isItATriangle(event) {
   let length2 = parseInt(document.getElementById("length2").value);
   let length3 = parseInt(document.getElementById("length3").value);
 
+  equal.setAttribute('class', 'hidden');
+  isos.setAttribute('class', 'hidden')
+  scal.setAttribute('class', 'hidden');
+
   if (length1 === length2 && length1 == length3) {
-    window.alert('Equilateral');
+    equal.removeAttribute('class', 'hidden');
   } else if (length1 === length2 || length1 === length3 || length2 === length3) {
-    window.alert('Isosceles');
+    isos.removeAttribute('class', 'hidden');
   } else if (length1 + length2 <= length3 || length1 + length3 <= length2 || length2 + length3 <= length1) {
-    window.alert('NOT A TRIANGLE');
+    window.alert('NOT A TRIANGLE DUMMY!')
   } else if (!(length1 === length2 && length1 == length3)) {
-    window.alert('Scalene');
+    scal.removeAttribute('class', 'hidden');
   }
 }
 
